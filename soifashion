@@ -1,0 +1,60 @@
+index.html
+<!DOCTYPE html>
+<html>
+<head>
+  <title>UrbanWear</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>UrbanWear</h1>
+  <div>
+    <button onclick="showLogin()">Login</button>
+    <button onclick="viewCart()">Cart (<span id="cart-count">0</span>)</button>
+  </div>
+</header>
+
+<section class="hero">
+  <h2>New Collection</h2>
+  <p>Trendy outfits for you</p>
+</section>
+
+<section class="products">
+  <div class="card">
+    <img src="https://via.placeholder.com/150">
+    <h3>Beige Shirt</h3>
+    <p>₹999</p>
+    <button onclick="addToCart('Beige Shirt', 999)">Add to Cart</button>
+  </div>
+
+  <div class="card">
+    <img src="https://via.placeholder.com/150">
+    <h3>Black Pants</h3>
+    <p>₹1299</p>
+    <button onclick="addToCart('Black Pants', 1299)">Add to Cart</button>
+  </div>
+</section>
+
+<!-- LOGIN MODAL -->
+<div id="loginBox" class="modal">
+  <div class="modal-content">
+    <h2>Login</h2>
+    <input id="Soi-fashion" placeholder="Soi-fashion">
+    <input id="password" type="password" placeholder="Password">
+    <button onclick="login()">Login</button>
+  </div>
+</div>
+
+<!-- CART MODAL -->
+<div id="cartBox" class="modal">
+  <div class="modal-content">
+    <h2>Your Cart</h2>
+    <ul id="cart-items"></ul>
+    <p>Total: ₹<span id="total"></span></p>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
